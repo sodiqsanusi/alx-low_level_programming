@@ -23,6 +23,5 @@ void times_table(void)
 		_putchar(i);
 		_putchar(10);
 	}
-	return (0);
 }
 
