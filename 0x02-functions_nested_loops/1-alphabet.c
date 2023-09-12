@@ -1,17 +1,18 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main - The entry point for the C program
+* print_alphabet - Prints lower letter alphabets to the console
 *
-* Return: Always 0 (success)
+* Return: Nothing
+* (The main objective of the function is to print to the terminal)
 */
-int main(void)
+void print_alphabet(void)
 {
 	int i;
 
 	for (i = 97; i < 123; i++)
 	{
-		_putchar(c);
+		_putchar(i);
 	}
 	_putchar(10);
 	return (0);
