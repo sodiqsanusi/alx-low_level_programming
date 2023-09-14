@@ -22,6 +22,7 @@ void more_numbers(void)
 				d = p % 10;
 			}
 			_putchar(48 + d);
+			p++;
 		}
 		_putchar(10);
 	}
