@@ -14,6 +14,7 @@ void puts2(char *str)
 	{
 		if (num_check % 2)
 			_putchar(*str);
+		num_check++;
 	}
 	_putchar(10);
 }
