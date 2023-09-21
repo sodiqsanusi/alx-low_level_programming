@@ -28,6 +28,8 @@ char *cap_string(char *str)
 			*str_cpy -= 32;
 			flag = 0;
 		}
+		if ((flag == 0) && (*str_cpy > 64) && (*str_cpy < 91))
+			*str_cpy += 32;
 		str_cpy++;
 	}
 	return (str);
