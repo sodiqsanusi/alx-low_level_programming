@@ -11,7 +11,7 @@ void reverse_array(int *a, int n)
 {
 	int half_num;
 
-	for (half_num = 0; half_num != n / 2; half_num++)
+	for (half_num = 0; half_num < n / 2; half_num++)
 	{
 		int temp = a[half_num];
 
