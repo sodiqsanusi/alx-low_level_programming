@@ -2,36 +2,33 @@
 
 /**
 * cap_string - Capitalizes all words of a string
-* @str: String to be modified (Capitalized)
+* @s: String to be modified (Capitalized)
 *
 * Return: Pointer to the modified string
 */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	char *str_cpy = str;
-	int flag = 1;
+	int i = 0;
 
-	while (*str_cpy)
+	while (s[i] != '\0')
 	{
-		if ((*str_cpy == ' ') || (*str_cpy == '\t') || (*str_cpy == '\n')
-			|| (*str_cpy == ',') || (*str_cpy == ';') || (*str_cpy == '.')
-			|| (*str_cpy == '!') || (*str_cpy == '?') || (*str_cpy == '"')
-			|| (*str_cpy == '(') || (*str_cpy == ')') || (*str_cpy == '{')
-			|| (*str_cpy == '}'))
+		if (s[i] >= 97 && s[i] <= 122)
 		{
-			flag = 1;
-			str_cpy++;
-			continue;
+			if (i == 0)
+			{
+				s[i] -= 32;
+			}
+			if (s[i - 1] == 32 || s[i - 1] == 9 || s[i - 1] == 10 ||
+				s[i - 1] == 44 || s[i - 1] == 59 || s[i - 1] == 46 ||
+				s[i - 1] == 33 || s[i - 1] == 63 || s[i - 1] == 34 ||
+				s[i - 1] == 40 || s[i - 1] == 41 || s[i - 1] == 123 ||
+				s[i - 1] == 124)
+			{
+				s[i] -= 32;
+			}
 		}
-		if ((flag == 1) && (*str_cpy >= 'a') && (*str_cpy <= 'z'))
-		{
-			*str_cpy -= 32;
-			flag = 0;
-		}
-		if ((flag == 0) && (*str_cpy >= 'A') && (*str_cpy <= 'Z'))
-			*str_cpy += 32;
-		str_cpy++;
+		i++;
 	}
-	return (str);
+	return (s);
 }
 
