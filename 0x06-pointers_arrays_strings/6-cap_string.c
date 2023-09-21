@@ -9,7 +9,7 @@
 char *cap_string(char *str)
 {
 	char *str_cpy = str;
-	int flag = 0;
+	int flag = 1;
 
 	while (*str_cpy)
 	{
