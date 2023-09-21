@@ -23,7 +23,7 @@ char *cap_string(char *str)
 			str_cpy++;
 			continue;
 		}
-		if (flag == 1)
+		if ((flag == 1) && (*str_cpy > 96) && (*str_cpy < 123))
 		{
 			*str_cpy -= 32;
 			flag = 0;
