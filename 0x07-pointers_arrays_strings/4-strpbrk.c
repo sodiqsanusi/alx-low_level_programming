@@ -16,7 +16,7 @@ char *_strpbrk(char *s, char *accept)
 		while (*accept_cpy)
 		{
 			if (*s == *accept_cpy)
-				return (accept_cpy);
+				return (s);
 			accept_cpy++;
 		}
 		s++;
@@ -24,11 +24,9 @@ char *_strpbrk(char *s, char *accept)
 	while (*accept)
 	{
 		if (*s == *accept)
-			return (accept);
+			return (s);
 		accept++;
 	}
-	if (*s == *accept)
-		return (accept);
 	return ('\0');
 }
 
