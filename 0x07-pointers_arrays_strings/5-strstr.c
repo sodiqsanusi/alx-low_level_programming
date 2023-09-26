@@ -13,21 +13,14 @@ char *_strstr(char *haystack, char *needle)
 	{
 		char *needle_cpy = needle;
 		char *haystack_cpy = haystack;
-		int flag = 0;
 
-		while (*needle_cpy && *needle_cpy == *haystack_cpy)
+		while (*needle_cpy && *needle_cpy == *haystack)
 		{
-			flag = 1;
-			haystack_cpy++;
+			haystack++;
 			needle_cpy++;
 		}
-		if (*needle_cpy == '\0' && flag == 1)
-			return (haystack);
-		if (flag == 1)
-		{
-			haystack = haystack_cpy;
-			continue;
-		}
+		if (*needle_cpy == '\0')
+			return (haystack_cpy);
 		haystack++;
 	}
 
