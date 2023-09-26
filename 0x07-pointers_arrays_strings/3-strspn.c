@@ -10,19 +10,30 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int length = 0;
-	int flag = 1;
+	int flag = 0;
 
-	while (*s && flag == 1)
+	while (*s)
 	{
-		while (*accept)
+		char *accept_cpy = accept;
+
+		while (*accept_cpy)
 		{
-			if (*s == *accept)
+			if (*s == *accept_cpy)
 			{
 				length++;
+				flag = 1;
 				break;
 			}
-
-		}	
+			else
+			{
+				flag = 0;
+				accept_cpy++;
+			}
+		}
+		if (flag == 0)
+			break;
+		s++;
 	}
+	return (length);
 }
 
