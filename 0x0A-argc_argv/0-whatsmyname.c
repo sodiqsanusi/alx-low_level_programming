@@ -5,10 +5,11 @@
 * @argc: Argument count from the terminal
 * @argv: Array of string containing the terminal commands
 *
-* Return: Nothing (void)
+* Return: Always 0 (success)
 */
-void main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	printf("%s", argv[0]);
+	printf("%s\n", argv[0]);
+	return (0);
 }
 
