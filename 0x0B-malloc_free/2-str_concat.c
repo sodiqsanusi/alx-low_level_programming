@@ -22,13 +22,13 @@ char *str_concat(char *s1, char *s2)
 	if (c_string == NULL)
 		return (NULL);
 
-	while (*s1 && (s1 != NULL))
+	while ((s1 != NULL) && *s1)
 	{
 		c_string[iterator] = *s1;
 		iterator++;
 		s1++;
 	}
-	while (*s2 && (s2 != NULL))
+	while ((s2 != NULL) && *s2)
 	{
 		c_string[iterator] = *s2;
 		iterator++;
