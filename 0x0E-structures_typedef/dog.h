@@ -9,12 +9,12 @@
 *
 * Description: This holds the details of a dog object
 */
-struct dog
+typedef struct dog
 {
 	char *name;
 	int age;
 	char *owner;
-};
+} dog;
 
 #endif
 
