@@ -16,6 +16,11 @@ struct dog
 	char *owner;
 };
 
+/**
+* typedef dog_t - An alias for the dog struct
+*/
+typedef struct dog dog_t;
+
 /*Function Prototypes*/
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
