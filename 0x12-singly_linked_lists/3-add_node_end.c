@@ -9,6 +9,29 @@
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	int count 
+	unsigned int count = 0;
+	list_t *newNode = NULL;
+	list_t *currentNode = NULL;
+
+	while (str[count])
+		count++;
+
+	newNode = malloc(sizeof(list_t));
+	if (newNode == NULL)
+		return (NULL);
+
+	newNode->str = strdup(str);
+	newNode->len = count;
+	newNode->next = NULL;
+
+	if (*head == NULL)
+		return (newNode);
+	currentNode = *head;
+
+	while (currentNode->next != NULL)
+		currentNode = currentNode->next;
+	currentNode->next = newNode;
+
+	return (newNode);
 }
 
