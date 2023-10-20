@@ -20,6 +20,8 @@ typedef struct list_s
 	struct list_s *next;
 } list_t;
 
+typedef list_t *nodePtr;
+
 /* Function Prototypes*/
 int _putchar(char c);
 size_t print_list(const list_t *h);
