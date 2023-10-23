@@ -10,6 +10,8 @@ void free_listint2(listint_t **head)
 {
 	nodePtr temp = *head;
 
+	if (head == NULL)
+		return;
 	while (temp)
 	{
 		*head = temp->next;
