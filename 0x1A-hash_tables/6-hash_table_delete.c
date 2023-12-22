@@ -3,7 +3,7 @@
 /**
 * hash_table_delete - delete the whole hash table
 * @ht: the hash table
-* 
+*
 * Return: "void" Nothing
 */
 void hash_table_delete(hash_table_t *ht)
