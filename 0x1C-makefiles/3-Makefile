@@ -8,8 +8,8 @@ RM = rm -f
 
 .PHONY: all clean oclean fclean re
 
-all: ${SRC}
-	${CC} ${SRC} -o ${NAME}
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
 
 clean:
 	${RM} *~ ${NAME}
